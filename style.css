@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4a90e2, #50e3c2); /* Contoh gradien biru ke hijau */
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar tombol navigasi */
+}
+
+.nav-button {
+    background-color: #607D8B; /* Warna abu-abu kebiruan untuk tombol navigasi */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Lebih bulat seperti di gambar */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border samar */
+}
+
+.nav-button:hover {
+    background-color: #455A64;
+}
+
+main {
+    /* Padding-top ini sudah ada dan penting untuk keseluruhan konten utama */
+    padding-top: 100px; /* Memberi jarak dari header yang fixed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 50px; /* Jarak antar setiap section */
+
+    /* ******** PENYESUAIAN PENTING DI SINI ******** */
+    /* Menambahkan padding-top untuk offset saat navigasi ke section */
+    padding-top: 80px; /* Beri jarak di bagian atas setiap section */
+    margin-top: -80px; /* Tarik kembali section agar margin-bottom sebelumnya tetap berfungsi */
+    /* ******************************************* */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Untuk section pertama (portofolio), kita tidak perlu margin-top negatif */
+#portofolio {
+    margin-top: 0; /* Pastikan section pertama tidak memiliki margin-top negatif */
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px; /* Padding di dalam setiap kartu */
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Batasi lebar kartu utama */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Jarak antara card dengan elemen di bawahnya */
+}
+
+.welcome-card {
+    padding: 50px; /* Padding lebih besar untuk kartu selamat datang */
+}
+
+.welcome-card h1 {
+    color: #333; /* Warna gelap untuk judul */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Mengatur jarak antar baris judul */
+}
+
+.info-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block; /* Agar kotak mengikuti lebar kontennya */
+}
+
+.info-box p {
+    margin: 5px 0;
+    color: #555;
+}
+
+marquee {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007BFF; /* Warna biru untuk teks bergerak */
+    font-weight: bold;
+    white-space: nowrap; /* Pastikan teks tidak patah baris */
+}
+
+.section-title {
+    background-color: #607D8B;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Jarak di bawah judul section */
+    display: inline-block;
+}
+
+/* Section "Hai" */
+.about-content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2196F3;
+    margin-bottom: 10px;
+}
+
+.about-text-box {
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Section "Pendidikan" */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.education-item {
+    padding: 20px;
+}
+
+.education-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.education-text-box {
+    padding: 10px;
+}
+
+/* Section "Hobby" */
+.hobby-content-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.hobby-text-box {
+    flex: 1;
+    text-align: left;
+}
+
+.hobby-pic {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid #FFC107;
+}
+
+/* Section "Kontak" */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hobby-content-card {
+        flex-direction: column;
+    }
+
+    .hobby-pic {
+        width: 100%;
+        height: auto;
+    }
+}
